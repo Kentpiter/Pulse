@@ -8,6 +8,9 @@
 .conteiner {
     max-width: 950px;
     margin-inline: auto;
+    @media screen and ( max-width: 991px  ) {
+    padding-inline: 10px;
+    }
 }
 
 @import 'blocks/promo';
@@ -15,3 +18,8 @@
 @import 'blocks/buttons';
 @import 'blocks/advantages';
 @import 'blocks/title';
+
+
+
+@import 'media/header_media';
+@import 'media/button_media';
