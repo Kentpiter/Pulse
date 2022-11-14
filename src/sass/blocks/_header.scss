@@ -1,6 +1,6 @@
 .header {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between;    
 	align-items: center;
 	&__logo {
 		width: 250px;
@@ -13,6 +13,7 @@
 		font-size: 12px;		
 		color: #FFFFFF;
 		text-align: center;
+        transform: translateX(-50px);
 		span {
 			margin-top: 7px;
 			display: block;
