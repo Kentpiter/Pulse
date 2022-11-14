@@ -1,5 +1,15 @@
-
+@import 'base/variables';
+@import 'base/mixin';
 
 * {
-    font-family: 'Museo Sans Cyrl', sans-serif;
+    font-family: 'MuseoModerno', sans-serif;
 }
+
+.conteiner {
+    max-width: 950px;
+    margin-inline: auto;
+}
+
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/buttons';
