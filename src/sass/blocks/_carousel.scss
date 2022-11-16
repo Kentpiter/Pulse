@@ -1,0 +1,9 @@
+.carousel {
+    padding-block: 81px;
+    &__inner {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
