@@ -1,9 +1,22 @@
 .carousel {
     padding-block: 81px;
-    &__inner {
+    .tns-item {
         img {
+            width: 750px;
             display: block;
             margin: 0 auto;
         }
+    }
+    .prev, .next {
+        border: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 50%;
+        left: -66px;
+        transform: translateY(-50%);
+    }
+    .next {
+        left: auto;
+        right: -66px;
     }
 }
