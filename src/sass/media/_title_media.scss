@@ -1,0 +1,18 @@
+@media screen and ( max-width: 767px ) {
+    .title {
+        &_consultation {
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and ( max-width: 575px ) {
+    .title {
+        &_consultation {
+            font-size: 20px;
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+}
