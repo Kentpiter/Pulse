@@ -24,7 +24,7 @@
 
 }
 
-@media screen and ( max-width: 575px ) {
+@media screen and ( max-width: 424px ) {
 	.promo {
 		&__wrapper {
 			align-items: center;
@@ -42,12 +42,9 @@
 }
 
 @media screen and ( max-width: 374px ) {
-	.promo {
-		&__wrapper {
-			align-items: center;
-		}
+	.promo {		
 		&__header {
-			font-size: 24px;
+			font-size: 23px;
 		}
 		&__icons {
 			width: 300px;

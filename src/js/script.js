@@ -5,7 +5,17 @@ const slider = tns({
     autoplay: false,
     controls: false,
     nav: false,
-    autoHeight: true    
+    autoHeight: true,
+    navPosition: "bottom",
+    responsive: {
+        320: {
+          nav: true,                    
+        },
+        768: {
+            nav: false,
+            
+          }, 
+    }  
   });
 
 document.querySelector('.prev').addEventListener('click', () => slider.goTo('prev'));

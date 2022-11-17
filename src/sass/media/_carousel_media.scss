@@ -1,0 +1,34 @@
+@media screen and ( max-width: 991px ) {
+    .carousel {
+        &__conteiner {
+            width: 625px;
+        }    
+    }
+}
+
+@media screen and ( max-width: 767px ) {
+    .carousel {
+        &__conteiner {
+            width: 555px;
+        }
+    }
+    .prev, .next {
+        display: none;
+    }
+}
+
+@media screen and ( max-width: 575px ) {
+    .carousel {
+        &__conteiner {
+            width: 404px;
+        }    
+    }
+}
+
+@media screen and ( max-width: 424px ) {
+    .carousel {
+        &__conteiner {
+            width: 300px;
+        }    
+    }
+}
