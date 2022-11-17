@@ -1,0 +1,38 @@
+.catalog {
+    padding-bottom: 80px;
+    &__tabs {
+        margin-top: 46px;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 10px;        
+    }
+    &__tab {
+        width: 222px;
+        height: 52px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #6B6B6B;
+        border: 2px solid #D0D0D0;
+        cursor: pointer;
+        transform: skewX(-25deg);
+        transition: 0.5s all;
+        &:hover {
+            box-shadow: 3px 3px 20px $main-color;
+            border: none;
+        }
+        div {
+            transform: skewX(25deg);
+        }
+        &_active {
+            background-color: $main-color;
+            color: #FFFFFF;
+            border: none;
+        }
+    }
+}
