@@ -42,7 +42,8 @@
         width: 303px;
         min-height: 442px;
         padding: 20px;
-        border: 2px solid #E8E8E8;     
+        border: 2px solid #E8E8E8;
+        overflow: hidden;    
         &__img {
             display: block;
             margin-inline: auto;
@@ -73,10 +74,13 @@
             text-align: center;
             text-decoration-line: underline;
             color: $main-color;
+            text-transform: uppercase;
+            &:hover {
+                color: $main-color;
+            }
         }
         hr {
-            margin-block: 17px;
-            height: 4px;
+            margin-block: 17px;            
             background-color: #E8E8E8;
         }
         &__footer {
@@ -94,6 +98,52 @@
             font-weight: 700;
             font-size: 20px;
             color: #050505;
+        }
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content {
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+            &_active {
+                margin-right: 20px;
+                transform: translateX(0%);
+            }
+        }
+        &__list {
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            padding-right: 20px;
+            padding-left: 15px;
+            margin-bottom: 0;
+            transform: translateX(0%);
+            transition: 0.5s all;
+            list-style-type: none;
+            &_active {
+                margin-left: 0px;
+                transform: translateX(-100%);
+            }
+            li {
+                position: relative;
+                margin-bottom: 20px;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 21px;
+                color: #555555;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -15px;
+                    top: 8px;
+                }
+            }
         }
     }
 }
