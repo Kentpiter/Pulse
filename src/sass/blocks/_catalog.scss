@@ -37,9 +37,12 @@
     }
     &__content {
         margin-top: 57px;
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         gap: 19px;
+        &_active {
+            display: flex;
+        }
     }
     &-item {
         width: 303px;
