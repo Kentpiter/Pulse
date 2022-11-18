@@ -37,6 +37,9 @@
     }
     &__content {
         margin-top: 57px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 19px;
     }
     &-item {
         width: 303px;
@@ -143,6 +146,24 @@
                     left: -15px;
                     top: 8px;
                 }
+            }
+        }
+        &__back {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 15px));
+            margin-top: 10px;
+            font-family: 'MuseoModerno';
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            text-decoration-line: underline;
+            color: $main-color;
+            text-transform: uppercase;
+            &:hover {
+                color: $main-color;
             }
         }
     }
