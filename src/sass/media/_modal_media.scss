@@ -1,0 +1,18 @@
+@media screen and ( max-width: 575px ) {
+    .overlay {
+        .modal {
+            &__close {
+                top: 5px;
+                right: 0;
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 424px ) {
+    .overlay {
+        .modal {
+            width: 320px;
+        }
+    }
+}
