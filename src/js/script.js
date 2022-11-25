@@ -6,15 +6,7 @@ const slider = tns({
     controls: false,
     nav: true,
     autoHeight: true,
-    navPosition: "bottom",
-    responsive: {
-        320: {
-          nav: true,                    
-        },
-        768: {
-            nav: false,            
-          }, 
-    }  
+    navPosition: "bottom",    
   });
 
 document.querySelector('.prev').addEventListener('click', () => slider.goTo('prev'));

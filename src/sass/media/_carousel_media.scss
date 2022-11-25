@@ -1,3 +1,11 @@
+@media screen and ( min-width: 768px ) {
+    .carousel {
+        .tns-nav {
+            display: none;
+        }
+    }
+}
+
 @media screen and ( max-width: 991px ) {
     .carousel {
         &__conteiner {
