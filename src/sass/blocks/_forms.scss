@@ -16,8 +16,24 @@
             margin-bottom: 17px;
         }
     }
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        border: none;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #fff;
+        font-style: italic;
+    }
+    input.error {
+        margin-bottom: 5px;
+    }
     &_modal {
         margin-inline: auto;
         margin-top: 26px;
+        label.error {            
+            color: #000;
+        }
     }
 }

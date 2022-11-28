@@ -48,6 +48,32 @@ document.querySelector('.next').addEventListener('click', () => slider.goTo('nex
                 $('.overlay, #order').fadeIn('slow');
             })
         })
+
+        //Valid
+        function validForm(form) {
+            $(form).validate({
+                rules: {
+                    name: 'required',
+                    phone: 'required',
+                    email: {
+                        required: true,
+                        email: true,
+                    }
+                },
+                messages: {
+                    name: "Пожалуйста, введите своё имя",
+                    phone: "Пожалуйста, введите номер телефона",
+                    email: {
+                      required: "Нам нужен Ваш email,чтобы связаться с Вами",
+                      email: "Не правильный адрес почты"
+                    }
+                }
+
+            })
+        };
+        validForm('#form-consultation');
+        validForm('#consultation form');
+        validForm('#order form');
       
     });    
 })(jQuery);
