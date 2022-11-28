@@ -74,6 +74,9 @@ document.querySelector('.next').addEventListener('click', () => slider.goTo('nex
         validForm('#form-consultation');
         validForm('#consultation form');
         validForm('#order form');
+
+        //Maskedinput
+        $("input[name=phone]").mask("+7(999) 999-99-99");
       
     });    
 })(jQuery);
