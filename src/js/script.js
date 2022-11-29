@@ -12,8 +12,7 @@ const slider = tns({
 document.querySelector('.prev').addEventListener('click', () => slider.goTo('prev'));
 document.querySelector('.next').addEventListener('click', () => slider.goTo('next'));
 
-(function($) {
-    $(function() {
+$(document).ready(function() {
          //Script for tabs
         $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
             $(this)
@@ -30,7 +29,7 @@ document.querySelector('.next').addEventListener('click', () => slider.goTo('nex
                     $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
                 })
             })        
-        }
+        };
 
         toggleClass('.catalog-item__link');
         toggleClass('.catalog-item__back');
@@ -47,7 +46,7 @@ document.querySelector('.next').addEventListener('click', () => slider.goTo('nex
                 $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
                 $('.overlay, #order').fadeIn('slow');
             })
-        })
+        });
 
         //Valid
         function validForm(form) {
@@ -69,7 +68,7 @@ document.querySelector('.next').addEventListener('click', () => slider.goTo('nex
                     }
                 }
 
-            })
+            });
         };
         validForm('#form-consultation');
         validForm('#consultation form');
@@ -77,6 +76,25 @@ document.querySelector('.next').addEventListener('click', () => slider.goTo('nex
 
         //Maskedinput
         $("input[name=phone]").mask("+7(999) 999-99-99");
+
+        //POST
+        $('form').submit(function(e) {
+            e.preventDefault();
+            if (!$(this).valid()) {
+                return;
+            }
+            $.ajax({
+                type: "POST",
+                url: "mailer/smart.php",
+                data: $(this).serialize()
+            }).done(function() {
+                $(this).find("input").val("");
+                $('#consultation, #order').fadeOut();
+                $('.overlay, #thanks').fadeIn('slow');
+    
+                $('form').trigger('reset');
+            });
+            return false;
+        });
       
-    });    
-})(jQuery);
+});    
