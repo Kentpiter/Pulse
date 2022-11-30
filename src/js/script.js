@@ -105,5 +105,8 @@ $(document).ready(function() {
                 $('.pageup').fadeOut();
             }
         })
+
+        //wow.js
+        new WOW().init();
       
 });    
