@@ -9,3 +9,12 @@
         width: 100%;
     }
 }
+
+@media screen and ( max-width: 470px ) {
+    .pageup {
+        width: 20px;
+        height: 20px;
+        bottom: 20px;
+        right: 10px;
+    }
+}

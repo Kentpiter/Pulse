@@ -97,7 +97,7 @@ $(document).ready(function() {
             return false;
         });
 
-        //Pageup
+        //pageUp
         $(window).scroll(function () {
             if ($(this).scrollTop() > 1600) {
                 $('.pageup').fadeIn();
